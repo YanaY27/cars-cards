@@ -1,0 +1,12 @@
+.item {
+  position: relative;
+  width: calc((100% - 29px * 3) / 4);
+  list-style-type: none;
+}
+
+.icon {
+  position: absolute;
+  background-color: transparent;
+  top: 15px;
+  right: 15px;
+}
