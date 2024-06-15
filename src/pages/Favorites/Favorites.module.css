@@ -1,9 +1,20 @@
 .container {
   font-size: large;
   font-weight: 600;
-  display: flex;
+  margin-left: 128px;
+  margin-right: 128px;
   align-items: center;
   justify-content: center;
   gap: 8px;
   margin-top: 20px;
+  padding: 0;
+}
+.list {
+  padding-top: 20px;
+
+  flex-wrap: wrap;
+  gap: 50px 29px;
+}
+ul {
+  padding: 0;
 }

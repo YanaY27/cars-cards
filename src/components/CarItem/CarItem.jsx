@@ -28,15 +28,14 @@ const CarItem = ({ item }) => {
     setIsFavorite(favorites.includes(item.id));
   }, [favorites, item.id]);
 
-  const onToggleFavorite = () => {
+  const onToggleFavorite = (event) => {
+    event.preventDefault();
     if (isFavorite) {
       dispatch(removeFromFavorites(item.id));
     } else {
       dispatch(addToFavorites(item.id));
     }
-    setIsFavorite(!isFavorite);
   };
-
   if (!item) {
     return null;
   }
