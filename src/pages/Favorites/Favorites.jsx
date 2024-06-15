@@ -5,14 +5,14 @@ import { selectFavorites } from "../../redux/favorite/selectors";
 
 const Favorites = () => {
   const favorites = useSelector(selectFavorites);
-  // Тут потрібно також отримати всі автомобілі зі стану, щоб мати можливість відображати деталі обраних авто
+
   const allCars = useSelector((state) => state.cars.cars);
 
   const favoriteCars = allCars.filter((car) => favorites.includes(car.id));
 
   return (
-    <div>
-      <h2>Favorites</h2>
+    <div className={s.container}>
+      <h2></h2>
       <ul className={s.list}>
         {favoriteCars.map((car) => (
           <li className={s.item} key={car.id}>

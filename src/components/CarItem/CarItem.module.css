@@ -4,9 +4,132 @@
   list-style-type: none;
 }
 
-.icon {
-  position: absolute;
+.btn {
+  color: rgba(255, 255, 255, 0.8);
   background-color: transparent;
-  top: 15px;
-  right: 15px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+.likedIcon {
+  font-style: inherit;
+  color: #3470ff;
+  fill: #3470ff;
+  stroke: #3470ff;
+}
+.wrapImg {
+  border-radius: 14px;
+  background: linear-gradient(
+      180deg,
+      rgba(18, 20, 23, 0.5) 0%,
+      rgba(18, 20, 23, 0.5) 100%
+    ),
+    url("path_to_image");
+  height: 268px;
+}
+img {
+  border-radius: 14px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.title {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: #121417;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 14px;
+}
+.blue {
+  color: #3470ff;
+}
+.descr {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: rgba(18, 20, 23, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  .headInfo {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.5;
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      gap: 6px;
+    }
+    li:not(:last-child) {
+      padding-right: 6px;
+      border-right: 1px solid rgba(18, 20, 23, 0.1);
+    }
+  }
+}
+.bottomInfo {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 6px;
+  }
+  li {
+    display: flex;
+    align-items: start;
+    box-sizing: content-box;
+    height: 100%;
+  }
+
+  li:not(:last-child) {
+    padding-right: 6px;
+    border-right: 1px solid rgba(18, 20, 23, 0.1);
+  }
+}
+.learnMoreBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 143%;
+  color: #fff;
+  margin-top: 28px;
+  border-radius: 12px;
+  border-color: transparent;
+
+  height: 44px;
+  background: #3470ff;
+  &:hover,
+  &:focus {
+    background-color: #0b44cd;
+  }
 }

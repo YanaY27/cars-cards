@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { GrFavorite } from "react-icons/gr";
+import { IoMdHeart } from "react-icons/io";
 import {
   addToFavorites,
   removeFromFavorites,
@@ -52,17 +53,17 @@ const CarItem = ({ item }) => {
     rentalCompany,
     address,
   } = item;
-  const [city, country] = address.split(",");
-  const functionality = functionalities[0];
+  const [, city, country] = address.split(",");
+  const functionality = functionalities[0].split(" ").slice(0, 2).join(" ");
 
   return (
     <>
       <li className={s.item}>
-        <button className={s.icon} onClick={onToggleFavorite}>
+        <button className={s.btn} onClick={onToggleFavorite}>
           {isFavorite ? (
-            <GrFavorite size={20} className={s.likedIcon} />
+            <IoMdHeart size={20} className={s.likedIcon} />
           ) : (
-            <GrFavorite size={20} />
+            <GrFavorite size={20} className={s.icon} />
           )}
         </button>
         <div className={s.wrapImg}>
@@ -76,12 +77,12 @@ const CarItem = ({ item }) => {
             <p>{rentalPrice}</p>
           </div>
           <div className={s.descr}>
-            <ul>
-              <li>{city}</li>
-              <li>{country}</li>
+            <ul className={s.headInfo}>
+              <li>{city.trim()}</li>
+              <li>{country.trim()}</li>
               <li>{rentalCompany}</li>
             </ul>
-            <ul className={s.bot_info}>
+            <ul className={s.bottomInfo}>
               <li>{type}</li>
               <li>{model}</li>
               <li>{id}</li>

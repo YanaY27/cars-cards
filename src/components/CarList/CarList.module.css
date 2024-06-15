@@ -1,3 +1,7 @@
 .list {
+  display: flex;
   list-style-type: none;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 50px 29px;
 }

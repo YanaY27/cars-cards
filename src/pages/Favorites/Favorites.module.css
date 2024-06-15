@@ -1,0 +1,9 @@
+.container {
+  font-size: large;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}

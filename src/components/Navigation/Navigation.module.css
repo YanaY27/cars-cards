@@ -1,0 +1,16 @@
+.nav {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 128px;
+  margin-top: 20px;
+  color: #0b44cd;
+  background: #f7f7fb;
+  padding: 20px;
+}
+header:hover {
+  color: #121417;
+}

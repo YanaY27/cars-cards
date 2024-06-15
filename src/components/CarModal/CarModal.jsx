@@ -25,7 +25,7 @@ const CarModal = ({ onClose, item, isOpen }) => {
     rentalPrice,
   } = item;
 
-  const [city, country] = address.split(",");
+  const [, city, country] = address.split(",");
   const rentalConditionsArray = rentalConditions.split("\n");
 
   return (
@@ -36,10 +36,10 @@ const CarModal = ({ onClose, item, isOpen }) => {
         className={s.modal}
         overlayClassName={s.overlay}
       >
-        <button className={s.closeBtn} onClick={onClose}>
-          <IoMdClose />
-        </button>
         <div className={s.content}>
+          <button className={s.closeBtn} onClick={onClose}>
+            <IoMdClose />
+          </button>
           <section className={s.firstSection}>
             <div className={s.wrapImg}>
               <img src={img} alt={make} className={s.img} />
@@ -65,12 +65,12 @@ const CarModal = ({ onClose, item, isOpen }) => {
 
           <section className={s.secondSection}>
             <h3>Accessories and functionalities:</h3>
-            <ul>
+            <ul className={s.list}>
               {accessories.map((accessory, index) => (
                 <li key={index}>{accessory}</li>
               ))}
             </ul>
-            <ul>
+            <ul className={s.list}>
               {functionalities.map((functionality, index) => (
                 <li key={index}>{functionality}</li>
               ))}
